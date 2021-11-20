@@ -10,10 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText feild1,feild2,feild3,feild4;
+    EditText feild,feild2,feild3,feild4;
     Button btn;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        feild1= (EditText)findViewById(R.id.income);
+        feild= (EditText)findViewById(R.id.income);
         feild2 = (EditText)findViewById(R.id.expenses);
         feild3 = (EditText)findViewById(R.id.wealth);
         feild4 = (EditText)findViewById(R.id.total);
@@ -36,14 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void calc(View view) {
         try {
-            String incomeVal = feild1.getText().toString();
+            String incomeVal = feild.getText().toString();
             String expensesVal = feild2.getText().toString();
             int sum;
             sum = Integer.parseInt(incomeVal) - Integer.parseInt(expensesVal);
-            feild3.setText(sum +" Rs.");
+            feild3.setText(sum +" Rupees.");
 
             double zakat = (sum * 2.5) / 100;
-            feild4.setText(String.valueOf(zakat)+ " Rs.");
+            feild4.setText(String.valueOf(zakat)+ " Rupees.");
         }
         catch (Exception e){
 
