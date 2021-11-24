@@ -29,7 +29,6 @@
         android:foregroundTint="#554E4E"
         android:inputType="textPersonName"
         android:text="Your Total Income"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#ECB9B9"
         android:textColorHighlight="#D5A1A1"
         android:textColorHint="#E3AFAF"
